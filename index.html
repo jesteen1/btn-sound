@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audio project</title>
+</head>
+
+<body >
+    <p class="hidden">hellow</p>
+  <div class="conentcenter">
+
+      <div class="grid">
+          <button id="first">1</button>
+          <button id="second">2</button>
+          <button id="third">3</button>
+          <button id="fourth">4</button>
+      </div>
+  </div>
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .hidden{
+        display: none;
+    }
+    .text{
+        font-size: 50px;
+        padding: 0; 
+        background-color: red;
+        color: snow;
+        text-align: center;
+        border-radius: 5px;
+        font-variant: small-caps;
+        
+
+    }
+    .conentcenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    button{
+        padding: 40px;
+        border-radius: 10px;
+        font-size: 80px;
+        border: none;
+        font-weight: bolder;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2,200px);
+        grid-gap: 5px;
+        font-family: sans-serif;
+      
+    }button:active{
+        background: linear-gradient(rgb(0, 204, 255),rgb(183, 0, 255)) ;
+        color: snow;
+    }
+</style>
+<script>
+    var firstaudio=document.getElementById('first');
+    var secondaudio=document.getElementById('second');
+    var thirdaudio=document.getElementById('third');
+    var fourthaudio=document.getElementById('fourth');
+    var firstmp3=new Audio('./first.mp3');
+    var secondmp3=new Audio('./second.mp3');
+    var thirdmp3=new Audio('./third.mp3');
+    var fourthmp3=new Audio('./fourth.mp3');
+    firstaudio.onclick=()=>{
+       firstmp3.play();
+       secondmp3.pause()
+        secondmp3.currentTime=0;
+        thirdmp3.pause()
+        thirdmp3.currentTime=0;
+        fourthmp3.pause();
+        fourthmp3.currentTime=0;
+    }
+    secondaudio.onclick=()=>{
+        secondmp3.play();
+        firstmp3.pause();
+        firstmp3.currentTime=0;
+        thirdmp3.pause();
+        thirdmp3.currentTime=0;
+        fourthmp3.pause();
+        fourthmp3.currentTime=0;
+    }
+thirdaudio.onclick=()=>{
+   thirdmp3.play();
+        firstmp3.pause();
+        firstmp3.currentTime=0;
+        secondmp3.pause();
+        secondmp3.currentTime=0;
+        fourthmp3.pause();
+        fourthmp3.currentTime=0;
+}
+fourthaudio.onclick=()=>{
+    fourthmp3.play();
+        firstmp3.pause();
+        firstmp3.currentTime=0;
+        secondmp3.pause();
+        secondmp3.currentTime=0;
+        thirdmp3.pause();
+        thirdmp3.currentTime=0;
+}
+</script>
+</html>

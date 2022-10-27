@@ -92,10 +92,96 @@
     var secondaudio=document.getElementById('second');
     var thirdaudio=document.getElementById('third');
     var fourthaudio=document.getElementById('fourth');
-    var firstmp3=new Audio('./first.mp3');
-    var secondmp3=new Audio('./second.mp3');
-    var thirdmp3=new Audio('./third.mp3');
-    var fourthmp3=new Audio('./fourth.mp3');
+    var firstmp3=new Audio('./firstaudio.mp3');
+    var secondmp3=new Audio('./secondaudio.mp3');
+    var thirdmp3=new Audio('./thirdaudio.mp3');
+    var fourthmp3=new Audio('./third.mp3');
+    window.addEventListener('keydown',(e)=>{
+      
+        if(e.keyCode=='49'){
+          
+            firstmp3.play();
+       secondmp3.pause()
+        secondmp3.currentTime=0;
+        thirdmp3.pause()
+        thirdmp3.currentTime=0;
+        fourthmp3.pause();
+        fourthmp3.currentTime=0;
+        }
+    else  if(e.keyCode=='97'){
+        //   alert('done');
+          firstmp3.play();
+     secondmp3.pause()
+      secondmp3.currentTime=0;
+      thirdmp3.pause()
+      thirdmp3.currentTime=0;
+      fourthmp3.pause();
+      fourthmp3.currentTime=0;
+      }
+    else  if(e.keyCode=='50'){
+           
+               secondmp3.play();
+        firstmp3.pause();
+        firstmp3.currentTime=0;
+        thirdmp3.pause();
+        thirdmp3.currentTime=0;
+        fourthmp3.pause();
+        fourthmp3.currentTime=0;
+        }
+        else  if(e.keyCode=='98'){
+           
+           secondmp3.play();
+    firstmp3.pause();
+    firstmp3.currentTime=0;
+    thirdmp3.pause();
+    thirdmp3.currentTime=0;
+    fourthmp3.pause();
+    fourthmp3.currentTime=0;
+    }
+
+      else  if(e.keyCode=='51'){
+      
+        thirdmp3.play();
+        firstmp3.pause();
+        firstmp3.currentTime=0;
+        secondmp3.pause();
+        secondmp3.currentTime=0;
+        fourthmp3.pause();
+        fourthmp3.currentTime=0;
+      }
+      else  if(e.keyCode=='99'){
+      
+      thirdmp3.play();
+      firstmp3.pause();
+      firstmp3.currentTime=0;
+      secondmp3.pause();
+      secondmp3.currentTime=0;
+      fourthmp3.pause();
+      fourthmp3.currentTime=0;
+    }
+
+      else if(e.keyCode=='52'){
+       
+        fourthmp3.play();
+        firstmp3.pause();
+        firstmp3.currentTime=0;
+        secondmp3.pause();
+        secondmp3.currentTime=0;
+        thirdmp3.pause();
+        thirdmp3.currentTime=0;
+      }
+      else if(e.keyCode=='100'){
+       
+       fourthmp3.play();
+       firstmp3.pause();
+       firstmp3.currentTime=0;
+       secondmp3.pause();
+       secondmp3.currentTime=0;
+       thirdmp3.pause();
+       thirdmp3.currentTime=0;
+     }
+    })
+
     firstaudio.onclick=()=>{
        firstmp3.play();
        secondmp3.pause()

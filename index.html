@@ -11,16 +11,30 @@
 <body >
     <p class="hidden">hellow</p>
   <div class="conentcenter">
-
+<audio src="./ncs songs/new audio/insirpation.mp3"></audio>
       <div class="grid">
-          <button id="first">1</button>
-          <button id="second">2</button>
-          <button id="third">3</button>
-          <button id="fourth">4</button>
+          <button id="first" title="Fade">1
+            <div class="text1">Fade</div>
+          </button>
+          <button id="second" title="Force">2
+            <div class="text1">Force</div>
+          </button>
+          <button id="third" title="energytic">3
+            <div class="text1">energytic</div>
+          </button>
+          <button id="fourth" title="insirpation">4
+            <div class="text1">inspiration</div>
+          </button>
       </div>
   </div>
 </body>
 <style>
+    .text1{
+        font-size: 20px;
+        color: rgb(110, 110, 110);
+        font-family: sans-serif;
+        font-weight: 900;
+    }
     body{
      background-color: rgba(255, 166, 0, 0.253);
         padding:  10px 0;
@@ -86,103 +100,20 @@
         background: linear-gradient(rgb(0, 204, 255),rgb(183, 0, 255)) ;
         color: snow;
     }
+    button:active .text1{
+        color: white ;
+        text-shadow: 10px 10px 20px black;
+    }
 </style>
 <script>
     var firstaudio=document.getElementById('first');
     var secondaudio=document.getElementById('second');
     var thirdaudio=document.getElementById('third');
     var fourthaudio=document.getElementById('fourth');
-    var firstmp3=new Audio('./firstaudio.mp3');
-    var secondmp3=new Audio('./secondaudio.mp3');
-    var thirdmp3=new Audio('./thirdaudio.mp3');
-    var fourthmp3=new Audio('./fourthaudio.mp3');
-    window.addEventListener('keydown',(e)=>{
-      
-        if(e.keyCode=='49'){
-          
-        firstmp3.play();
-        secondmp3.pause()
-        secondmp3.currentTime=0;
-        thirdmp3.pause()
-        thirdmp3.currentTime=0;
-        fourthmp3.pause();
-        fourthmp3.currentTime=0;
-        }
-    else  if(e.keyCode=='97'){
-        //   alert('done');
-      firstmp3.play();
-      secondmp3.pause()
-      secondmp3.currentTime=0;
-      thirdmp3.pause()
-      thirdmp3.currentTime=0;
-      fourthmp3.pause();
-      fourthmp3.currentTime=0;
-      }
-    else  if(e.keyCode=='50'){
-           
-        secondmp3.play();
-        firstmp3.pause();
-        firstmp3.currentTime=0;
-        thirdmp3.pause();
-        thirdmp3.currentTime=0;
-        fourthmp3.pause();
-        fourthmp3.currentTime=0;
-
-        }
-        else  if(e.keyCode=='98'){
-           
-           secondmp3.play();
-    firstmp3.pause();
-    firstmp3.currentTime=0;
-    thirdmp3.pause();
-    thirdmp3.currentTime=0;
-    fourthmp3.pause();
-    fourthmp3.currentTime=0;
-    }
-
-      else  if(e.keyCode=='51'){
-      
-        thirdmp3.play();
-        firstmp3.pause();
-        firstmp3.currentTime=0;
-        secondmp3.pause();
-        secondmp3.currentTime=0;
-        fourthmp3.pause();
-        fourthmp3.currentTime=0;
-      }
-      else  if(e.keyCode=='99'){
-      
-      thirdmp3.play();
-      firstmp3.pause();
-      firstmp3.currentTime=0;
-      secondmp3.pause();
-      secondmp3.currentTime=0;
-      fourthmp3.pause();
-      fourthmp3.currentTime=0;
-    }
-
-      else if(e.keyCode=='52'){
-       
-        fourthmp3.play();
-        firstmp3.pause();
-        firstmp3.currentTime=0;
-        secondmp3.pause();
-        secondmp3.currentTime=0;
-        thirdmp3.pause();
-        thirdmp3.currentTime=0;
-      }
-      else if(e.keyCode=='100'){
-       
-       fourthmp3.play();
-       firstmp3.pause();
-       firstmp3.currentTime=0;
-       secondmp3.pause();
-       secondmp3.currentTime=0;
-       thirdmp3.pause();
-       thirdmp3.currentTime=0;
-     }
-    })
-
+    var firstmp3=new Audio('./ncs songs/new audio/Alan Walker - Fade [NCS Release].mp3'); //audio changing place
+    var secondmp3=new Audio('./ncs songs/new audio/Alan Walker - Force [NCS Release].mp3'); //audio changing place
+    var thirdmp3=new Audio('./ncs songs/new audio/energytic.mp3'); //audio changing place
+    var fourthmp3=new Audio('./ncs songs/new audio/insirpation.mp3');
     firstaudio.onclick=()=>{
        firstmp3.play();
        secondmp3.pause()

@@ -9,10 +9,12 @@
 </head>
 
 <body >
-    <p class="hidden">hellow</p>
+   <div class="flex btn-center"><button class="btn" id="stop">stop
+   </button></div>
   <div class="conentcenter">
 
       <div class="grid">
+     
           <button id="first" title="Fade">1
             <div class="text1">Fade</div>
           </button>
@@ -29,6 +31,37 @@
   </div>
 </body>
 <style>
+    .btn-center{
+display: flex;
+justify-content: center;
+    }
+.btn{
+    padding: 2px 3px ;
+    background-color: red;
+    color:snow;
+   border-radius: 5px;
+}
+.btn:active{
+   
+    transition: all linear .5s;
+  
+}
+    .pl-3{
+        padding-left: 30px;
+    }
+    .flex{
+        display: flex;
+    }
+    .heading{
+        font-size: 30px;
+        background-color: rgb(0, 132, 255);
+        padding: 10px;
+        margin: 0;
+        color: whitesmoke;
+        font-weight: 900;
+
+
+    }
     .text1{
         font-size: 20px;
         color: rgb(110, 110, 110);
@@ -114,6 +147,8 @@
     var secondmp3=new Audio('./ncs songs/new audio/Alan Walker - Force [NCS Release].mp3'); //audio changing place
     var thirdmp3=new Audio('./ncs songs/new audio/energytic.mp3'); //audio changing place
     var fourthmp3=new Audio('./ncs songs/new audio/insirpation.mp3');
+    var time=document.getElementById('time');
+    var stopaudio=document.getElementById('stop');
     firstaudio.onclick=()=>{
        firstmp3.play();
        secondmp3.pause()
@@ -150,5 +185,27 @@ fourthaudio.onclick=()=>{
         thirdmp3.pause();
         thirdmp3.currentTime=0;
 }
+ stopaudio.onclick=()=>{
+if(!firstmp3.currentTime==0){
+    console.log('Fade-stop');
+    firstmp3.pause()
+    firstmp3.currentTime=0;
+}
+else if(!secondmp3.currentTime==0){
+    console.log('force-stop');
+    secondmp3.pause()
+    secondmp3.currentTime=0;
+}
+else if(!thirdmp3.currentTime==0){
+    console.log('energytic-stop');
+    thirdmp3.pause()
+    thirdmp3.currentTime=0;
+}
+else if(!fourthmp3.currentTime==0){
+    console.log('insirpation-stop');
+    fourthmp3.pause()
+    fourthmp3.currentTime=0;
+}
+ }
 </script>
 </html>
